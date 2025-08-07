@@ -256,7 +256,7 @@ img {
 こだわりセクション
 ----------------------------------------------------- */
 .commitment {
-  background: url("../img/washi-bg.jpg") repeat;
+  background: url("img/washi-bg.jpg") repeat;
   background-size: cover;
   background-position: center;
   padding: 4rem 1rem;
