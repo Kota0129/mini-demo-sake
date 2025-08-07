@@ -328,7 +328,7 @@ img {
 フッター
 ----------------------------------------------------- */
 .footer {
-  background-color: #f2efe8; 
+  background-color: #fff;; 
   padding: 0.5rem 0;
   text-align: center;
   font-family: 'Noto Serif JP', serif;
@@ -343,7 +343,7 @@ img {
 }
 
 .footer-logo .logo-main {
-  color: #333;
+  color: #4b0082;
 }
 
 .footer-logo .logo-accent {
