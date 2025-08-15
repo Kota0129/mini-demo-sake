@@ -1,119 +1,157 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8">
-    <title>信州酒蔵 結（ゆい）</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&family=Noto+Sans+JP:wght@100..900&family=M+PLUS+Rounded+1c:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-    <script src="main.js"></script>
-  </head>
-  
+<head>
+  <meta charset="UTF-8">
+  <title>信州酒蔵 結（ゆい）</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&family=Noto+Sans+JP:wght@100..900&family=M+PLUS+Rounded+1c:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+  <script src="main.js"></script>
+  <style>
+    .skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+    .skip-link:focus{position:static;width:auto;height:auto;padding:.5rem 1rem;background:#000;color:#fff;border-radius:6px}
+  </style>
+</head>
 <body>
-    <header class="header">
-      <h1 class="logo">
-        <a href="#">
+  <a class="skip-link" href="#main">コンテンツへスキップ</a>
+
+  <header class="header" role="banner">
+    <h1 class="logo">
+      <a href="#" aria-label="トップへ">
         <span class="logo-main">信州酒蔵</span> <span class="logo-accent">結</span>
       </a>
     </h1>
-
-      <button class="hamburger" aria-label="メニューを開く">
-        <span></span><span></span><span></span>
-      </button>
-
-          <nav class="nav">
-            <ul class="nav-list">
-              <li><a href="#about">こだわり</a></li>
-              <li><a href="#voice">お客様の声</a></li>
-              <li><a href="#access">店舗情報</a></li>
-            </ul>
-          </nav>
-        <div class="mask"></div>
-      </header>
     
-      <main>
-        <section class="hero">
-          <div class="hero-slider">
-            <div class="hero-bg" style="background-image: url('img/hero1.jpg');"></div>
-            <div class="hero-bg" style="background-image: url('img/hero2.jpg');"></div>
-            <div class="hero-bg" style="background-image: url('img/hero3.jpg');"></div>
-            <div class="hero-bg" style="background-image: url('img/hero4.jpg');"></div>
-          </div>
-        
-          <div class="wrapper">
-            <h1 class="hero-title">全国の銘酒を、あなたの食卓へ</h1>
-            <p class="hero-sub">信州から、選び抜かれた逸品をお届けします。</p>
-            <a href="#access" class="btn">銘酒を見る</a>
-          </div>
-        </section>        
+    <button class="hamburger"
+            aria-label="メニューを開閉"
+            aria-controls="global-nav"
+            aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
 
-          <section id="about" class="commitment fadein">
-            <div class="wrapper">
-              <h2 class="section-title">信州酒蔵　結のこだわり</h2>
-            <div class="commitment-grid">
-              <div class="item">
-                <h3>厳選された蔵元</h3>
-                <p>職人の魂がこもった伝統の味を、全国から選りすぐり。</p>
-              </div>
-              <div class="item">
-                <h3>四季を感じる酒</h3>
-                <p>季節ごとの味わいを大切に、旬の日本酒をご提供。</p>
-              </div>
-              <div class="item">
-                <h3>海外発送対応</h3>
-                <p>日本文化を世界へ。グローバル発送にも対応可能です。</p>
-              </div>
-            </div>
-            </div>
-          </section>
+    <nav class="nav" id="global-nav" aria-label="主要メニュー">
+      <ul class="nav-list">
+        <li><a href="#about">こだわり</a></li>
+        <li><a href="#voice">お客様の声</a></li>
+        <li><a href="#access">店舗情報</a></li>
+      </ul>
+    </nav>
 
-          <section id="voice" class="voice fadein">
-            <div class="wrapper">
-              <h2 class="section-title">お客様の声</h2>
-              <div class="voice-list">
-                <div class="voice-item">
-                  <p class="comment">「丁寧な対応で、初めてでも安心して選べました。」</p>
-                  <p class="user">東京都・30代・女性</p>
-                </div>
-                <div class="voice-item">
-                  <p class="comment">「贈り物として大変喜ばれました。また利用したいです。」</p>
-                  <p class="user">大阪府・40代・男性</p>
-                </div>
-                <div class="voice-item">
-                  <p class="comment">「海外の友人にも紹介して、すごく好評でした！」</p>
-                  <p class="user">福岡県・50代・女性</p>
-                </div>
-            </div>
-            </div>
-          </section>
-    
-          <section id="access" class="access fadein">
-            <div class="wrapper">
-              <h2 class="section-title">店舗のご案内</h2>
-              <div class="access-info">
-                <p>〒390-0874 長野県松本市桜町〇〇</p>
-                <p>営業時間：10:00〜19:00（定休日：水曜）</p>
-                <p>TEL：0263-XX-XXXX</p>
-                <p>アクセス：松本駅から徒歩8分</p>
-              </div>
-              <a href="#" class="btn">お問い合わせはこちら</a>
-            </div>
-          </section>
+    <div class="mask" aria-hidden="true"></div>
+  </header>
+  
+  <main id="main" role="main">
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-slider" aria-hidden="true">
+        <div class="hero-bg" style="background-image:url('img/hero1.jpg');"></div>
+        <div class="hero-bg" style="background-image:url('img/hero2.jpg');"></div>
+        <div class="hero-bg" style="background-image:url('img/hero3.jpg');"></div>
+        <div class="hero-bg" style="background-image:url('img/hero4.jpg');"></div>
+      </div>
+
+      <div class="wrapper">
+        <h2 id="hero-heading" class="hero-title">全国の銘酒を、あなたの食卓へ</h2>
+        <p class="hero-sub">信州から、選び抜かれた逸品をお届けします。</p>
+        <a href="#access" class="btn" aria-label="店舗情報へ移動して銘酒を見る">銘酒を見る</a>
+      </div>
+    </section>
+
+    <section id="about" class="commitment fadein" aria-labelledby="about-heading">
+      <div class="wrapper">
+        <h2 id="about-heading" class="section-title">信州酒蔵　結のこだわり</h2>
+        <div class="commitment-grid" role="list">
+          <div class="item" role="listitem">
+            <h3>厳選された蔵元</h3>
+            <p>職人の魂がこもった伝統の味を、全国から選りすぐり。</p>
+          </div>
+          <div class="item" role="listitem">
+            <h3>四季を感じる酒</h3>
+            <p>季節ごとの味わいを大切に、旬の日本酒をご提供。</p>
+          </div>
+          <div class="item" role="listitem">
+            <h3>海外発送対応</h3>
+            <p>日本文化を世界へ。グローバル発送にも対応可能です。</p>
+          </div>
         </div>
-      </main>
+      </div>
+    </section>
 
-      <footer class="footer">
-          <p class="footer-logo"><span class="logo-main">信州酒蔵</span> <span class="logo-accent">結</span></p>
-          <p class="footer-info">© 2025 Shinshu Sakagura YUI. All rights reserved.</p>
-      </footer>
-      
+    <section id="voice" class="voice fadein" aria-labelledby="voice-heading">
+      <div class="wrapper">
+        <h2 id="voice-heading" class="section-title">お客様の声</h2>
+        <div class="voice-list" role="list">
+          <div class="voice-item" role="listitem">
+            <p class="comment">「丁寧な対応で、初めてでも安心して選べました。」</p>
+            <p class="user">東京都・30代・女性</p>
+          </div>
+          <div class="voice-item" role="listitem">
+            <p class="comment">「贈り物として大変喜ばれました。また利用したいです。」</p>
+            <p class="user">大阪府・40代・男性</p>
+          </div>
+          <div class="voice-item" role="listitem">
+            <p class="comment">「海外の友人にも紹介して、すごく好評でした！」</p>
+            <p class="user">福岡県・50代・女性</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="access" class="access fadein" aria-labelledby="access-heading">
+      <div class="wrapper">
+        <h2 id="access-heading" class="section-title">店舗のご案内</h2>
+        <div class="access-info">
+          <p>〒390-0874 長野県松本市桜町〇〇</p>
+          <p>営業時間：10:00〜19:00（定休日：水曜）</p>
+          <p>TEL：<a href="tel:0263XXXXXXXX" aria-label="電話 0263-XX-XXXX">0263-XX-XXXX</a></p>
+          <p>アクセス：松本駅から徒歩8分</p>
+        </div>
+        <a href="#" class="btn" aria-label="お問い合わせフォームへ">お問い合わせはこちら</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <p class="footer-logo">
+      <span class="logo-main">信州酒蔵</span> <span class="logo-accent">結</span>
+    </p>
+    <nav class="footer__nav" aria-label="フッターメニュー">
+      <ul class="nav-list">
+        <li><a href="#about">こだわり</a></li>
+        <li><a href="#voice">お客様の声</a></li>
+        <li><a href="#access">店舗情報</a></li>
+      </ul>
+    </nav>
+    <p class="footer-info">© 2025 Shinshu Sakagura YUI. All rights reserved.</p>
+  </footer>
+
+  <script>
+    $(function(){
+      const $btn = $('.hamburger');
+      const $mask = $('.mask');
+      const $nav  = $('#global-nav');
+
+      function closeNav(){
+        $btn.attr('aria-expanded','false');
+        $('body').removeClass('nav-open');
+      }
+
+      $btn.on('click', function(){
+        const expanded = $(this).attr('aria-expanded') === 'true';
+        $(this).attr('aria-expanded', String(!expanded));
+        $('body').toggleClass('nav-open', !expanded);
+      });
+
+      $nav.find('a').on('click', closeNav);
+      $mask.on('click', closeNav);
+    });
+  </script>
 </body>
 </html>
